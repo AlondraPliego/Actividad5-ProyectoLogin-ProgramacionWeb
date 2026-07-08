@@ -19,7 +19,7 @@ function validarLogin() {
     } else if (validarPassword(password) === false) {
         mensajeErrorP.textContent = "Contraseña insegura (min 8, mayúscula, minúscula, número, símbolo)";
         hayError = true;
-    }í
+    }
     if (hayError) {
         return;
     }
