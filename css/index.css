@@ -208,7 +208,7 @@ body {
     background-color: #202020;
 }
 
-button {
+.formularioAlumnos button {
     width: 100%;
     padding: 7px;
     background-color: #0B0F2B;
@@ -221,7 +221,7 @@ button {
     margin-bottom: 10px;
     transition: background 0.2s;
 }
-button:hover {
+.formularioAlumnos button:hover {
     background-color: #4DBCF2;
 }
 
