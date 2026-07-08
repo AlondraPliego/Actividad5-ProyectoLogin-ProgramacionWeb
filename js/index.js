@@ -1,9 +1,16 @@
-menuDrop('menu-usuario', 'Nombre de Usuario', ['Salir del sistema']);
+let correoGuardado = sessionStorage.getItem("correoIngresado");
+
+if (!correoGuardado) {
+    correoGuardado = "Usuario Invitado";
+} 
+
+menuDrop('menu-usuario', correoGuardado, ['Salir del sistema']);
 
 const salir = document.querySelector('#menu-usuario a');
 
 if (salir) {
     salir.addEventListener('click', function() {
+        sessionStorage.removeItem("correoIngresado");
         window.location.href = 'login.html';
     });
 }
