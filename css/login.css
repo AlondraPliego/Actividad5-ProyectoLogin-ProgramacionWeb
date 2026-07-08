@@ -1,0 +1,28 @@
+.gradient-custom-2 {
+/* fallback for old browsers */
+background: #ffffff;
+
+/* Chrome 10-25, Safari 5.1-6 */
+background: -webkit-linear-gradient(to right, #4DBCF2, #192D95, #0B0F2B);
+
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: linear-gradient(to right,#4DBCF2, #192D95, #0B0F2B);
+}
+.gradientI-custom-2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/login.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100%; /* Asegura que llene el alto del contenedor padre */
+}
+@media (min-width: 768px) {
+.gradient-form {
+height: 100vh !important;
+}
+}
+@media (min-width: 769px) {
+.gradient-custom-2 {
+border-top-right-radius: .3rem;
+border-bottom-right-radius: .3rem;
+}
+}
