@@ -104,6 +104,7 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 20px;
+    box-shadow: 0 15px 35px rgba(25, 45, 149, 0.4);
 }
 
 .sidebar {
