@@ -89,26 +89,28 @@ function guardarDatos() {
     mensajeErrorT.textContent = "";
     mensajeErrorF.textContent = "";
     let valido = true;
-    if (numeroControl === "" ||semestre === "" || fechaNacimiento === "" ) {
+    if (numeroControl === "" || semestre === "" || fechaNacimiento === "") {
         mensajeErrorN.textContent = "El campo no puede estar vacío.";
         document.getElementById("nc").focus();
         mensajeErrorT.textContent = "El campo no puede estar vacío.";
         mensajeErrorF.textContent = "El campo no puede estar vacío.";
         return;
     }
-    if (!validarLongitud(numeroControl, 6)) {
-        document.getElementById("errorNumeroControl").textContent = "Solo debe de tener 6 digitos";
+    if (!soloNumeros(numeroControl)) {
+        mensajeErrorN.textContent = "El número de control solo debe contener números.";
+        valido = false;
+    } else if (!validarLongitud(numeroControl, 6)) {
+        mensajeErrorN.textContent = "Solo debe de tener 6 dígitos";
         valido = false;
     } else {
-        document.getElementById("errorNumeroControl").textContent = "";
+        mensajeErrorN.textContent = "";
     }
     document.getElementById("errorFecha").textContent = "";
-
     if (valido) {
         const edad = calcularEdad(fechaNacimiento);
         const mayor = esMayorDeEdad(fechaNacimiento);
         document.getElementById("nc-guardado").textContent = "Número de control: " + numeroControl;
-        document.getElementById("semestre-guardado").textContent = "Semestre: " +semestre+"°";
+        document.getElementById("semestre-guardado").textContent = "Semestre: " + semestre + "°";
         document.getElementById("edad-calculada").textContent = "Edad: " + edad + " años";
         document.getElementById("edad-validacion").textContent = mayor ? "Es mayor de edad" : "Es menor de edad";
         document.getElementById("modal").classList.remove("oculto");
@@ -134,4 +136,9 @@ function calcularEdad(fechaNacimiento) {
 /** Valida si es mayor de edad */
 function esMayorDeEdad(fechaNacimiento) {
     return calcularEdad(fechaNacimiento) >= 18;
+}
+
+function soloNumeros(texto) {
+    const patronL = /^[0-9]+$/;
+    return patronL.test(texto);
 }
