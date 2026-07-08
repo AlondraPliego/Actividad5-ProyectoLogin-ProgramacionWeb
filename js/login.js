@@ -14,8 +14,11 @@ function validarLogin() {
         document.getElementById("correoLogin").focus();
         return;
     }
-    if (correoValido === false || passwordValida === false ) {
+    if (correoValido === false) {
         mensajeErrorL.textContent = "Correo inválido.";
+        return;
+    }
+    if (passwordValida === false ) {
         mensajeErrorP.textContent = "Contraseña insegura (min 8, mayúscula, minúscula, número, símbolo)";
         return;
     }
