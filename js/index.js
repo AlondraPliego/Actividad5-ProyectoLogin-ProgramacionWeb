@@ -1,6 +1,6 @@
 let correoGuardado = sessionStorage.getItem("correoIngresado");
 if (!correoGuardado) {
-    correoGuardado = "Invitado";
+    correoGuardado = "Usuario Invitado";
 } 
 
 menuDrop('menu-usuario', correoGuardado, ['Salir del sistema']);

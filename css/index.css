@@ -201,7 +201,7 @@ body {
     text-align: center;
 }
 
-h1 {
+.formularioAlumnos h1 {
     font-size: 24px;
     color: #ffffff;
     margin-bottom: 1.5rem;
@@ -210,13 +210,13 @@ h1 {
     text-align: left;
     margin-bottom: 0px;
 }
-label {
+.label-fo {
     display: block;
     font-size: 15px;
     color: #ffffff;
     margin-bottom: 2px;
 }
-input {
+.formularioAlumnos input {
     width: 100%;
     padding: 6px 10px;
     border: 1px solid #535439;
@@ -246,13 +246,13 @@ button:hover {
     background-color: #4DBCF2;
 }
 
-ul {
+.formularioAlumnos ul {
     list-style: none;
     padding: 0;
     text-align: left;
     color: #2C3E2B;
 }
-li {
+.formularioAlumnos li {
     padding: 4px 0;
     border-bottom: 1px solid rgba(83, 84, 57, 0.3);
 }
