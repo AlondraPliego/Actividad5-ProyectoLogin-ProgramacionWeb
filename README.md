@@ -1,6 +1,6 @@
 # Actividad 5-Programacion Web
 # Proyecto: Login
-**Integrantes **
+**Integrantes**
 - Pliego Méndez Alondra 
 
 - Salinas Cenobio Leonel Isaac
