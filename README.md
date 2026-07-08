@@ -1,5 +1,5 @@
 # Actividad 5-Programacion Web
-# Proyecto: Login
+## Proyecto: Login
 **Integrantes**
 - Pliego Méndez Alondra 
 
@@ -103,7 +103,7 @@ Para la implementación de componente visual Navbar, como se mencionó con anter
 2. Es un diseño sencillo de una tarjeta de información con un boton para cerrarlo.
 ![Modal](img/modalD.png)
 
-### Flujo
+## Flujo
 1. Ingreso de datos para iniciar sesión.
 ![Relleno de Datos](img/1.png)
 ![Validaciones](img/2.png)
