@@ -1,25 +1,26 @@
 function validarLogin() {
     const correo = document.getElementById("correoLogin").value;
     const password = document.getElementById("passwordLogin").value;
-    const correoValido = validarCorreo(correo);
-    const passwordValida = validarPassword(password);
     let mensajeErrorL = document.getElementById("errorCorreoLogin");
     let mensajeErrorP = document.getElementById("errorPasswordLogin");
-    let mensajeExito = document.getElementById("exitoLogin");
     mensajeErrorL.textContent = "";
     mensajeErrorP.textContent = "";
-    if (correo === "" || password === "") {
-        mensajeErrorP.textContent = "El campo no puede estar vacío.";
+    let hayError = false;
+    if (correo === "") {
         mensajeErrorL.textContent = "El campo no puede estar vacío.";
-        document.getElementById("correoLogin").focus();
-        return;
-    }
-    if (correoValido === false) {
+        hayError = true;
+    } else if (validarCorreo(correo) === false) {
         mensajeErrorL.textContent = "Correo inválido.";
-        return;
+        hayError = true;
     }
-    if (passwordValida === false ) {
+    if (password === "") {
+        mensajeErrorP.textContent = "El campo no puede estar vacío.";
+        hayError = true;
+    } else if (validarPassword(password) === false) {
         mensajeErrorP.textContent = "Contraseña insegura (min 8, mayúscula, minúscula, número, símbolo)";
+        hayError = true;
+    }í
+    if (hayError) {
         return;
     }
     sessionStorage.setItem("correoIngresado", correo);

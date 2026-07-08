@@ -1,5 +1,4 @@
 let correoGuardado = sessionStorage.getItem("correoIngresado");
-
 if (!correoGuardado) {
     correoGuardado = "Invitado";
 } 
@@ -62,15 +61,19 @@ if (formularioCaptura) {
 
         let correoValido = validarCorreo(document.getElementById('correo').value);
         let passwordValida = validarPassword(document.getElementById('password').value);
-
+        //let correoCoincide = correoIngresado === correoSesion;
         if (correoValido === false) {
             mensaje.textContent = "Correo no válido.";
             mensaje.style.color = "red";
         } 
+        /*else if (!correoCoincide) {
+            mensaje.textContent = "El correo no coincide con el de tu sesión iniciada.";
+            mensaje.style.color = "red";
+        }*/
         else if (passwordValida === false) {
             mensaje.textContent = "La contraseña debe tener 8 caracteres, una mayúscula, una minúscula, un número y un símbolo especial.";
             mensaje.style.color = "red";
-        } 
+        }
         else {
             mensaje.textContent = " ";
         }
@@ -96,10 +99,21 @@ function guardarDatos() {
     mensajeErrorT.textContent = "";
     mensajeErrorF.textContent = "";
     let valido = true;
-    if (numeroControl === "" || semestre === "" || fechaNacimiento === "") {
+    if (numeroControl === "" && semestre === "" && fechaNacimiento === "") {
         mensajeErrorN.textContent = "El campo no puede estar vacío.";
-        document.getElementById("nc").focus();
         mensajeErrorT.textContent = "El campo no puede estar vacío.";
+        mensajeErrorF.textContent = "El campo no puede estar vacío.";
+        return;
+    }
+    if (numeroControl === "") {
+        mensajeErrorN.textContent = "El campo no puede estar vacío.";
+        return;
+    }
+    if (semestre === "") {
+        mensajeErrorT.textContent = "El campo no puede estar vacío.";
+        return;
+    }
+    if (fechaNacimiento === "") {
         mensajeErrorF.textContent = "El campo no puede estar vacío.";
         return;
     }
@@ -149,3 +163,13 @@ function soloNumeros(texto) {
     const patronL = /^[0-9]+$/;
     return patronL.test(texto);
 }
+document.getElementById("nc").addEventListener("focus", function() {
+    document.getElementById("errorNumeroControl").textContent = "";
+});
+
+document.getElementById("semestre").addEventListener("focus", function() {
+    document.getElementById("errorSemestre").textContent = "";
+});
+document.getElementById("fechaNacimiento").addEventListener("focus", function() {
+    document.getElementById("errorFecha").textContent = "";
+});
