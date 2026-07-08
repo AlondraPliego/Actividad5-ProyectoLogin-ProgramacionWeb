@@ -18,8 +18,42 @@
     <div id="menu-usuario" class="menu-flotante"></div>
 
     <div class="contenedor">
-        <h2>Espacio reservado</h2>
-        <p>Aquí puedes agregar las dos funcionalidades que faltan (modal y el otro).</p>
+        <div class="formularioAlumnos">
+        <h1>Datos Escolares</h1>
+        <form id="formDatos">
+            <div class="campo">
+                <label for="nombre">Número de control:</label>
+                <input type="text" id="nc" maxlength="6" placeholder="221614" required>
+            </div>
+            <p class="error" id="errorNumeroControl"></p>
+
+            <div class="campo">
+                <label for="semestre">Último semestre cursado:</label>
+                <input type="number" min="1" id="semestre" placeholder="Ej: 1" required>
+            </div>
+            <p class="error" id="errorSemestre"></p>
+
+            <div class="campo">
+                <label for="fechaNacimiento">Fecha de nacimiento:</label>
+                <input type="date" id="fechaNacimiento" required>
+            </div>
+            <p class="error" id="errorFecha"></p>
+
+            <button type="button" onclick="guardarDatos()">Guardar</button>
+        </form>
+    </div>
+
+    <div id="modal" class="modal oculto">
+        <div class="modalGuardados">
+            <h2>Datos guardados</h2>
+            <p id="nc-guardado"></p>
+            <p id="semestre-guardado"></p>
+            <p id="edad-calculada"></p>
+            <p id="edad-validacion"></p>
+            <button type="button" onclick="cerrarModal()">Cerrar</button>
+        </div>
+    </div>
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/gh/leosc91/Componente-Menu@main/js/componente.js"></script>

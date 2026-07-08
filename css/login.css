@@ -1,5 +1,4 @@
 .gradient-custom-2 {
-
 /* fallback for old browsers */
 background: #ffffff;
 
@@ -10,7 +9,6 @@ background: -webkit-linear-gradient(to right, #4DBCF2, #192D95, #0B0F2B);
 background: linear-gradient(to right,#4DBCF2, #192D95, #0B0F2B);
 }
 .gradientI-custom-2 {
-    /* Esto combina tu degradado actual con la imagen de fondo */
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/login.jpg');
     background-size: cover;
     background-position: center;
