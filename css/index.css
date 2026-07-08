@@ -11,7 +11,7 @@ body {
 }
 
 .contenedor {
-    background: linear-gradient(to right, #4DBCF2, #192D95, #0B0F2B);
+    background-color: #000000;
     color: #ffffff;
     width: 100%;
     max-width: 1250px;
@@ -112,7 +112,7 @@ body {
     top: 0;
     left: 0;
     height: 100vh;
-    width: 280px;
+    width: 400px;
     background-color: #000000;
     color: #ffffff;
     padding: 80px 40px 40px;
@@ -141,10 +141,7 @@ body {
     border-radius: 10px;
     border: none;
     color: #ffffff;
-}
-
-.sidebar input {
-    background-color: #121212;
+    background-color: #202020;
 }
 
 .boton-validar {
@@ -163,6 +160,7 @@ body {
     font-size: 13px; 
 }
 
+/* Contenedor central del formulario */
 .error {
     color: #ec0000;
     font-size: 13px;
@@ -176,25 +174,11 @@ body {
     font-size: 13px;
 }
 
-
-.card {
-    background: rgba(0, 0, 0, 0.801);
-    backdrop-filter: blur(10px);
-    padding: 20px 23.5px;
-    border-radius: 45px;
-    box-shadow: 0 4px 15px rgba(245, 247, 242, 0.45);
-    width: 90%;
-    max-width: 320px;
-    box-sizing: border-box;
-    text-align: center;
-}
-
 .formularioAlumnos {
     background: rgba(0, 0, 0, 0.63);
     backdrop-filter: blur(10px);
     padding: 20px 23.5px;
     border-radius: 45px;
-    box-shadow: 0 4px 15px rgba(245, 247, 242, 0.45);
     width: 90%;
     max-width: 320px;
     box-sizing: border-box;
@@ -203,7 +187,7 @@ body {
 
 .formularioAlumnos h1 {
     font-size: 24px;
-    color: #ffffff;
+    color: #4DBCF2;
     margin-bottom: 1.5rem;
 }
 .campo {
@@ -217,18 +201,13 @@ body {
     margin-bottom: 2px;
 }
 .formularioAlumnos input {
-    width: 100%;
-    padding: 6px 10px;
-    border: 1px solid #535439;
-    border-radius: 6px;
-    font-size: 15px;
-    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    color: #ffffff;
+    background-color: #202020;
 }
-input[readonly] {
-    background-color: #ffffff;
-    font-weight: normal;
-    color: #000000;
-}
+
 button {
     width: 100%;
     padding: 7px;
