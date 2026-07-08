@@ -1,9 +1,16 @@
 let correoGuardado = sessionStorage.getItem("correoIngresado");
+
 if (!correoGuardado) {
     correoGuardado = "Usuario Invitado";
-} 
+}
 
 menuDrop('menu-usuario', correoGuardado, ['Salir del sistema']);
+
+const botonMenu = document.querySelector('#menu-usuario button');
+
+if (botonMenu) {
+    botonMenu.innerHTML = '<i class="fas fa-user-circle" aria-hidden="true" style="margin-right: 5px;"></i>' + correoGuardado;
+}
 
 const salir = document.querySelector('#menu-usuario a');
 
