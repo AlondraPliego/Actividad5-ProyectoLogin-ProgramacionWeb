@@ -75,7 +75,7 @@ if (formularioCaptura) {
             mensaje.style.color = "red";
         }
         else {
-            mensaje.textContent = " ";
+            mensaje.textContent = " ¿Datos válidados";
         }
     });
 }
