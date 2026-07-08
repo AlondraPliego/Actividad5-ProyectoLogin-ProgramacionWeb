@@ -1,7 +1,6 @@
 # Actividad5-ProyectoLogin-ProgramacionWeb
-
 # Explicación y documentación
-Los frameworks usados provienen de la siguiente página; **[Material Design for Bootstrap versión 5](https://mdbootstrap.com/docs/standard/extended/login/)**, además de la incorporación del [cdn](https://cdn.jsdelivr.net/gh/leosc91/Componente-Menu@main/css/componente.css) proveniente de la [librería propia](https://github.com/leosc91/Componente-Menu) para la incorporación del componente visual Menú Dropdown, el flujo inicia en el login, al confirmar a través del mismo las credenciales (correo y contraseña), pasa al index (pantalla del sistema), en el cual se encuentran las funcionalidades requeridas.
+Los frameworks usados provienen de la siguiente página; **[Material Design for Bootstrap versión 5](https://mdbootstrap.com/docs/standard/extended/login/)**, además de la incorporación del [cdn](https://cdn.jsdelivr.net/gh/leosc91/Componente-Menu@main/css/componente.css) proveniente de la [librería propia](https://github.com/leosc91/Componente-Menu) para la incorporación del componente visual Menú Dropdown, así como la incorporación del [cdn JS](https://cdn.jsdelivr.net/gh/tuusuario/componente-carrusel-pwa@main/dist/carrusel.js) y [cdn CSS](https://cdn.jsdelivr.net/gh/tuusuario/componente-carrusel-pwa@main/dist/carrusel.css) proveniente de la [librería propia](https://github.com/tuusuario/componente-carrusel-pwa) para la incorporación del componente visual Carrusel, el flujo inicia en el login, al confirmar a través del mismo las credenciales (correo y contraseña), pasa al index (pantalla del sistema), en el cual se encuentran las funcionalidades requeridas.
 
 La ventana que corresponde al index (pantalla del sistema), cuenta con 3 funciones principales:
 ```javascript
