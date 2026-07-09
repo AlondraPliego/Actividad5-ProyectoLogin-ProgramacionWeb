@@ -1,0 +1,7 @@
+# Ignora cualquier archivo de variables de entorno o API keys
+*.env
+
+# Ignora las carpetas de prueba
+prueba1/
+prueba2/
+prueba3/
